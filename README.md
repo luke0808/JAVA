@@ -43,7 +43,7 @@ System.out.println(list.stream().map(s->s.toUpperCase().replaceAll("A","ee")).co
 eePPLE BeeNeeNee MELON GReePE STReeWBERRY
 ```
 
-### STREAM FILTER란? 조건에 따라서 출력할래!!
+### STREAM FILTER란? - 조건에 따라서 출력할래!!
 
 - 스트림 요소를 하나씩 조건에 따라 filter하는 작업
 
@@ -62,5 +62,25 @@ System.out.println(stream);
 [Apple]
 ```
 
-### STREAM SORTED란? 정렬할래!!
+### STREAM SORTED란? - 정렬할래!!
 
+- 스트림을 정렬하는 기능
+
+```
+
+List<String> strings = Arrays.asList("kakao", "apple", "banana", "banana", "pineapple");
+System.out.println(strings.stream().sorted(Comparator.comparingInt(String::length)).collect(Collectors.toList()));
+
+List<Integer> integers = Arrays.asList(5,2,1,3,4);
+System.out.println(integers.stream().sorted().collect(Collectors.toList()));
+System.out.println(integers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()));
+
+```
+
+
+실행결과
+```
+[kakao, apple, banana, banana, pineapple]
+[1, 2, 3, 4, 5]
+[5, 4, 3, 2, 1]
+```
