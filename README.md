@@ -20,10 +20,8 @@ list.forEach(System.out::println);
 
 실행결과
 ```
-
 kakao
 apple
 banana
 pineapple
-
 ```
