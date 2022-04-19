@@ -8,8 +8,22 @@
 
 - ORACLE 쿼리와 마찬가지로 중복을 모두 제거하여 새로운 스트림으로 반환하는 기능.
 
+```
+
 List<String> strings = Arrays.asList("kakao", "apple", "banana", "banana", "pineapple");
+
 List<String> list = strings.stream().distinct().collect(Collectors.toList());
+
 list.forEach(System.out::println);
 
+```
 
+실행결과
+```
+
+kakao
+apple
+banana
+pineapple
+
+```
