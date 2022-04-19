@@ -57,5 +57,10 @@ System.out.println(stream);
 
 ```
 
-### STREAM SORTED란?
+실행결과
+```
+[Apple]
+```
+
+### STREAM SORTED란? 정렬할래!!
 
