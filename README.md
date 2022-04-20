@@ -1,4 +1,4 @@
-# JAVA 8버전 기록
+# JAVA 기록
 
 ## JAVA STREAM이란?
 
@@ -84,3 +84,24 @@ System.out.println(integers.stream().sorted(Comparator.reverseOrder()).collect(C
 [1, 2, 3, 4, 5]
 [5, 4, 3, 2, 1]
 ```
+
+### INTSTREAM 사용! STREAM 이용하여 , INT[] > LIST 변경하고 싶을 경우!
+
+```
+// parameter1 > [1,2,3,4,5]
+// parameter1 > [1,3,5,7,8]
+List<Integer> list1 = IntStream.of(parameter1).boxed().collect(Collectors.toList());
+List<Integer> list2 = IntStream.of(parameter2).boxed().collect(Collectors.toList());
+
+//*Tip 두 리스트에서 중복한 값만 도출 하는 방법은 > retainAll사용
+list1.retainAll(list2);
+        
+System.out.println(list1);
+
+```
+
+실행결과
+```
+[1, 3, 5]
+```
+
