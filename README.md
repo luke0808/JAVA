@@ -105,3 +105,36 @@ System.out.println(list1);
 [1, 3, 5]
 ```
 
+######################################################################################################
+
+### Character 클래스를 사용!(내가 사용한 것만 정리)
+
+static boolean isDigit(char ch) -> 지정된 문자가 숫자인지를 판별한다.
+
+```
+
+String s = "1232abdcd";
+for(int i = 0; i < s.length() ; i++){
+    //문자
+    if(Character.isDigit(s.charAt(i)) == false){
+        System.out.println(s.charAt(i) + " = 문자" );
+    //숫자
+    }else{
+        System.out.println(s.charAt(i) + " = 숫자" );
+    }
+}
+
+```
+
+실행결과
+```
+1 = 숫자
+2 = 숫자
+3 = 숫자
+2 = 숫자
+a = 문자
+b = 문자
+d = 문자
+c = 문자
+d = 문자
+```
